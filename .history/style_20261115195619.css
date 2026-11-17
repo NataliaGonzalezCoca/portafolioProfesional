@@ -1,0 +1,79 @@
+:root{
+    /* Fuentes */
+    --lima: #A1DC17;
+    --morado: #9400D3;
+    --fucsia: #FF1493;
+    --crema: #E6E6FA;
+    --lavanda: #DDA0DD;
+    --negro: #1F1F24;
+    /* Tipografías */
+    --fuente-textos: "MuseoModerno", sans-serif;
+    --fuente-titulo: "Boldonse", system-ui;
+    --fuente-cursiva: "Updock", cursive;
+}
+body{
+    box-sizing: border-box;
+}
+.bg-faded-grid {
+  --bg: #1f1f24;
+  --fg: #dda0dd;
+  --size:18vh;
+  --fade: 85%;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 50% 50%, transparent 25%, var(--bg) var(--fade)),
+    linear-gradient(var(--fg) 1px, transparent 1px),
+    linear-gradient(90deg, var(--fg) 1px, transparent 1px);
+  background-size: 100% 100%, var(--size) var(--size), var(--size) var(--size);
+  background-position: 0 0, 50% 50%, 50% 50%;
+}
+h2 {
+  margin: 0; padding: 0;
+  position:absolute;
+  top: 50%; left: 50%;
+  transform:translate(-50%,-50%);
+  font-size: 4em; color:transparent;
+    font-family: var(--fuente-titulo);
+    line-height: 1.4; /* <-- Evita espacio extra arriba y abajo */
+  white-space: nowrap;
+}
+.presentacion .subtitulo{
+  font-family: var(--fuente-cursiva);
+}
+h2 span:nth-child(1){
+  position:absolute;
+  top:0; left:0; color: var(--lavanda);
+  transition:0.5s;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  overflow:hidden;
+}
+h2:hover span:nth-child(1){
+  transform:translateY(-25px); 
+}
+h2 span:nth-child(2){
+  position:absolute;
+  top:0; left:0; color: var(--lavanda);
+  transition:0.5s;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  overflow:hidden;
+}
+h2:hover span:nth-child(2){
+  transform:translateY(25px); 
+}
+h2 span:nth-child(3){
+  position:absolute;
+  top:50%; left: 0;
+  transform:translateY(-50%) scaleY(0);
+  width: 100%; color: var(--negro);
+  background:var(--lima);
+  font-size: 0.7em; font-weight: 500;
+  
+  text-align:center;
+    padding: 0.2rem;
+  transition:0.5s;
+}
+h2:hover span:nth-child(3){
+  transform:translateY(-50%) scaleY(1);
+}

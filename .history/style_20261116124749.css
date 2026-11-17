@@ -1,0 +1,246 @@
+:root{
+    /* Fuentes */
+    --lima: #A1DC17;
+    --morado: #9400D3;
+    --fucsia: #FF1493;
+    --crema: #E6E6FA;
+    --lavanda: #DDA0DD;
+    --negro: #1F1F24;
+    /* Tipografías */
+    --fuente-textos: "MuseoModerno", sans-serif;
+    --fuente-titulo: "Boldonse", system-ui;
+    --fuente-cursiva: "Updock", cursive;
+}
+body{
+    box-sizing: border-box;
+}
+.bg-faded-grid {
+  --bg: #1f1f24;
+  --fg: #dda0dd;
+  --size:18vh;
+  --fade: 85%;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 50% 50%, transparent 25%, var(--bg) var(--fade)),
+    linear-gradient(var(--fg) 1px, transparent 1px),
+    linear-gradient(90deg, var(--fg) 1px, transparent 1px);
+  background-size: 100% 100%, var(--size) var(--size), var(--size) var(--size);
+  background-position: 0 0, 50% 50%, 50% 50%;
+}
+h2 {
+  margin: 0; padding: 0;
+  position:absolute;
+  top: 25%; left: 70%;
+  transform:translate(-50%,-50%);
+  font-size: 4em; color:transparent;
+    font-family: var(--fuente-titulo);
+    line-height: 1.4;
+  white-space: nowrap;
+}
+.presentacion .subtitulo{
+  font-family: var(--fuente-cursiva);
+}
+.presentacion img{
+  width: 100%; height: auto;
+}
+h2 span:nth-child(1){
+  position:absolute;
+  top:0; left:0; color: var(--lavanda);
+  transition:0.5s;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  overflow:hidden;
+}
+h2:hover span:nth-child(1){
+  transform:translateY(-25px); 
+}
+h2 span:nth-child(2){
+  position:absolute;
+  top:0; left:0; color: var(--lavanda);
+  transition:0.5s;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  overflow:hidden;
+}
+h2:hover span:nth-child(2){
+  transform:translateY(25px); 
+}
+h2 span:nth-child(3){
+  position:absolute;
+  top:50%; left: 0;
+  transform:translateY(-50%) scaleY(0);
+  width: 100%; color: var(--negro);
+  background:var(--lima);
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-align:center;
+    padding: 0.1rem;
+  transition:0.5s;
+}
+h2:hover span:nth-child(3){
+  transform:translateY(-50%) scaleY(1);
+}
+.presentacion .card {
+  display: flex;             /* Alinea la imagen y el texto en fila (horizontal) */
+  align-items: stretch;      /* Hace que la imagen se estire al alto exacto del texto */
+  margin-left: 8vw;
+  margin-top: -10rem;
+  width: 50vw;
+  height: auto;              /* El alto dependerá del contenido */
+  background: none;
+  padding-right: 2px;
+  border: solid 5px var(--lima); /* Nota: quité la coma después de 5px para que sea válido */
+  overflow: hidden;          /* Evita que la imagen se salga del borde */
+  box-shadow: 10px 10px var(--fucsia);
+}
+
+.presentacion .card img {
+  width: 35%;                /* Ajusta este porcentaje al ancho que quieras para tu foto */
+  height: auto;              /* Permite que Flexbox controle el alto según el texto */
+  object-fit: cover;         /* Recorta la foto sin deformarla para llenar el espacio */
+  display: block;
+}
+
+.presentacion .card-body {
+  width: 65%;                /* El resto del ancho para el texto (35% + 65% = 100%) */
+  backdrop-filter: blur(5px);
+  border-left: solid 5px var(--lima); /* Línea divisoria entre la imagen y el texto */
+  padding: 1.5rem;           /* Recomendado para que el texto no toque los bordes */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* Centra tu texto verticalmente respecto a la card */
+}
+
+.presentacion .card-title {
+  font-family: var(--fuente-cursiva);
+  text-align: center;
+  font-size: 4em;
+  color: var(--lavanda);
+}
+
+.presentacion .card-text {
+  font-family: var(--fuente-textos);
+  text-align: justify;
+  color: var(--crema);
+}
+/* Contenedor de la sección para centrar y dar aire */
+.proyectos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 1rem;
+  width: 100%;
+}
+
+/* Carcasa del teclado adaptada a tu paleta */
+.keyboard-case {
+  display: flex;
+  flex-wrap: wrap; /* Permite que se adapte si la pantalla es muy pequeña */
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  background: var(--negro);
+  border-radius: 8px;
+  border: 3px solid var(--lima);
+  box-shadow: 
+    8px 8px 0px var(--fucsia),
+    0 20px 35px rgba(0, 0, 0, 0.6);
+}
+
+/* Base de la tecla (bisel oscuro/morado) */
+.key {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #32323a, #16161a);
+  box-shadow: 
+    0 4px 0 #0d0d10,
+    0 6px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  user-select: none;
+}
+
+/* Superficie superior de la tecla */
+.key::after {
+  content: attr(data-char);
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(180deg, #2a2a32 0%, #1f1f24 100%);
+  border: 1px solid rgba(221, 160, 221, 0.25); /* Borde sutil lavanda */
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--fuente-textos);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--crema);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.1),
+    0 2px 3px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Efecto hover en las letras */
+.key:hover::after {
+  color: var(--lima);
+  border-color: var(--lima);
+}
+
+/* Estilo especial para las teclas de corazón (♡) en fucsia/morado */
+.key.accent {
+  background: linear-gradient(145deg, var(--fucsia), var(--morado));
+  box-shadow: 
+    0 4px 0 #590080,
+    0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.key.accent::after {
+  background: linear-gradient(180deg, #ff33a1 0%, var(--fucsia) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--crema);
+  font-size: 24px;
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.4),
+    0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.key.accent:hover::after {
+  color: var(--lima);
+}
+
+/* Efecto interactivo al presionar la tecla */
+.key:active {
+  transform: translateY(3px);
+  box-shadow: 
+    0 1px 0 #0d0d10,
+    0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.key.accent:active {
+  box-shadow: 
+    0 1px 0 #590080,
+    0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Ajuste responsivo para pantallas de celular */
+@media (max-width: 768px) {
+  .key {
+    width: 42px;
+    height: 42px;
+  }
+  .key::after {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  .key.accent::after {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,47 @@
+:root{
+    /* Fuentes */
+    --lima: #A1DC17;
+    --morado: #9400D3;
+    --fucsia: #FF1493;
+    --crema: #E6E6FA;
+    --lavanda: #DDA0DD;
+    --negro: #1F1F24;
+    /* Tipografías */
+    --fuente-textos: "MuseoModerno", sans-serif;
+    --fuente-titulo: "Boldonse", system-ui;
+    --fuente-cursiva: "Updock", cursive;
+}
+body{
+    box-sizing: border-box;
+}
+.bg-faded-grid {
+  --bg: #1f1f24;
+  --fg: #dda0dd;
+  --size:18vh;
+  --fade: 85%;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 50% 50%, transparent 25%, var(--bg) var(--fade)),
+    linear-gradient(var(--fg) 1px, transparent 1px),
+    linear-gradient(90deg, var(--fg) 1px, transparent 1px);
+  background-size: 100% 100%, var(--size) var(--size), var(--size) var(--size);
+  background-position: 0 0, 50% 50%, 50% 50%;
+}
+.presentacion{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3vw;
+}
+.presentacion h1 {
+    font-family: var(--fuente-titulo);
+    color: var(--fg);
+    font-size: 5vw;
+}
+.presentacion h2{
+    font-family: var(--fuente-cursiva);
+    color: var(--lima);
+    font-size: 5vw;
+}

@@ -1,0 +1,396 @@
+:root{
+    /* Fuentes */
+    --lima: #A1DC17;
+    --morado: #9400D3;
+    --fucsia: #FF1493;
+    --crema: #E6E6FA;
+    --lavanda: #DDA0DD;
+    --negro: #1F1F24;
+    /* Tipografías */
+    --fuente-textos: "MuseoModerno", sans-serif;
+    --fuente-titulo: "Boldonse", system-ui;
+    --fuente-cursiva: "Updock", cursive;
+}
+body{
+    box-sizing: border-box;
+}
+.bg-faded-grid {
+  --bg: #1f1f24;
+  --fg: #dda0dd;
+  --size:18vh;
+  --fade: 85%;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 50% 50%, transparent 25%, var(--bg) var(--fade)),
+    linear-gradient(var(--fg) 1px, transparent 1px),
+    linear-gradient(90deg, var(--fg) 1px, transparent 1px);
+  background-size: 100% 100%, var(--size) var(--size), var(--size) var(--size);
+  background-position: 0 0, 50% 50%, 50% 50%;
+}
+h2 {
+  margin: 0; padding: 0;
+  position:absolute;
+  top: 25%; left: 70%;
+  transform:translate(-50%,-50%);
+  font-size: 4em; color:transparent;
+    font-family: var(--fuente-titulo);
+    line-height: 1.4;
+  white-space: nowrap;
+}
+.presentacion .subtitulo{
+  font-family: var(--fuente-cursiva);
+}
+.presentacion img{
+  width: 100%; height: auto;
+}
+h2 span:nth-child(1){
+  position:absolute;
+  top:0; left:0; color: var(--lavanda);
+  transition:0.5s;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  overflow:hidden;
+}
+h2:hover span:nth-child(1){
+  transform:translateY(-25px); 
+}
+h2 span:nth-child(2){
+  position:absolute;
+  top:0; left:0; color: var(--lavanda);
+  transition:0.5s;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  overflow:hidden;
+}
+h2:hover span:nth-child(2){
+  transform:translateY(25px); 
+}
+h2 span:nth-child(3){
+  position:absolute;
+  top:50%; left: 0;
+  transform:translateY(-50%) scaleY(0);
+  width: 100%; color: var(--negro);
+  background:var(--lima);
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  text-align:center;
+    padding: 0.1rem;
+  transition:0.5s;
+}
+h2:hover span:nth-child(3){
+  transform:translateY(-50%) scaleY(1);
+}
+.presentacion .card {
+  display: flex;             /* Alinea la imagen y el texto en fila (horizontal) */
+  align-items: stretch;      /* Hace que la imagen se estire al alto exacto del texto */
+  margin-left: 8vw;
+  margin-top: -10rem;
+  width: 50vw;
+  height: auto;              /* El alto dependerá del contenido */
+  background: none;
+  padding-right: 2px;
+  border: solid 5px var(--lima); /* Nota: quité la coma después de 5px para que sea válido */
+  overflow: hidden;          /* Evita que la imagen se salga del borde */
+  box-shadow: 10px 10px var(--fucsia);
+}
+
+.presentacion .card img {
+  width: 35%;                /* Ajusta este porcentaje al ancho que quieras para tu foto */
+  height: auto;              /* Permite que Flexbox controle el alto según el texto */
+  object-fit: cover;         /* Recorta la foto sin deformarla para llenar el espacio */
+  display: block;
+}
+
+.presentacion .card-body {
+  width: 65%;                /* El resto del ancho para el texto (35% + 65% = 100%) */
+  backdrop-filter: blur(5px);
+  border-left: solid 5px var(--lima); /* Línea divisoria entre la imagen y el texto */
+  padding: 1.5rem;           /* Recomendado para que el texto no toque los bordes */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* Centra tu texto verticalmente respecto a la card */
+}
+
+.presentacion .card-title {
+  font-family: var(--fuente-cursiva);
+  text-align: center;
+  font-size: 4em;
+  color: var(--lavanda);
+}
+
+.presentacion .card-text {
+  font-family: var(--fuente-textos);
+  text-align: justify;
+  color: var(--crema);
+}
+/* Contenedor de ancho completo sin márgenes laterales */
+.proyectos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Wrapper que ocupa el 100% del ancho de la pantalla */
+.keyboard-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Cables estirados hasta los bordes de la pantalla */
+.cable {
+  flex: 1; /* Ocupa todo el espacio restante hasta el borde */
+  min-width: 40px;
+  height: 50px;
+  filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.65));
+  z-index: 1;
+}
+
+.cable-left {
+  margin-right: -4px;
+}
+
+.cable-right {
+  margin-left: -4px;
+}
+
+/* Carcasa blanca con relieve profundo y perspectiva 3D */
+.keyboard-case {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 8px;
+  padding: 14px 16px 18px 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #eaeaf0 85%, #cfcfe0 100%);
+  border-radius: 8px;
+  /* Paredes laterales y base gruesa de la carcasa */
+  border-top: 2px solid #ffffff;
+  border-bottom: 8px solid #b8b8c6;
+  box-shadow: 
+    0 28px 45px rgba(0, 0, 0, 0.75),
+    0 12px 20px rgba(0, 0, 0, 0.5),
+    inset 0 6px 10px rgba(0, 0, 0, 0.28), /* Sombra profunda de la cavidad */
+    inset 0 -2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* Base trapezoidal/biselada de cada tecla */
+.key {
+  position: relative;
+  width: 72px;
+  height: 74px;
+  border-radius: 8px;
+  /* Simula las 4 caras inclinadas del plástico con degradados y bordes */
+  background: linear-gradient(180deg, #e2e2e8 0%, #c4c4d0 60%, #9e9eac 100%);
+  border-top: 2px solid #f5f5f8;
+  border-left: 3px solid #d0d0da;
+  border-right: 3px solid #b8b8c4;
+  border-bottom: 7px solid #888896;
+  box-shadow: 
+    0 8px 12px rgba(0, 0, 0, 0.45),
+    0 2px 3px rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.08s ease, border-bottom-width 0.08s ease, box-shadow 0.08s ease;
+  user-select: none;
+}
+
+/* Cara superior cóncava/iluminada de la tecla */
+.key::after {
+  content: attr(data-char);
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle at 50% 35%, #ffffff 0%, #f2f2f6 65%, #e4e4ec 100%);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--fuente-textos);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--morado);
+  text-shadow: 0 1px 0 #ffffff;
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.18),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.06);
+  transform: translateY(-3px);
+}
+
+/* Teclas rosas de acento (♡) con volumen 3D */
+.key.accent {
+  background: linear-gradient(180deg, #e082ab 0%, #c25d89 60%, #DDA0DD 100%);
+  border-top: 2px solid #f2a4c6;
+  border-left: 3px solid #d4729d;
+  border-right: 3px solid #b5547f;
+  border-bottom: 7px solid #7d2c50;
+}
+
+.key.accent::after {
+  background: radial-gradient(circle at 50% 35%, #f29bc1 0%, #e07ea8 65%, #cf6a97 100%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff0f6;
+  font-size: 32px;
+  text-shadow: 0 1px 2px rgba(125, 44, 80, 0.4);
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.25),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.12);
+}
+
+/* Efecto realista al presionar la tecla hacia adentro */
+.key:hover {
+  transform: translateY(5px);
+  border-bottom-width: 2px;
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.cards {
+  margin-inline: auto;
+  width: min(70vw, 1050px);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  perspective: 1200px;
+}
+
+.cards .card.card-row {
+  position: relative;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch;
+  min-height: 300px;
+  width: 100% !important;
+  background-color: #e8e8e8;
+  background-image: url(assets/holo.jpg);
+  background-size: cover;
+  background-position: center;
+  border: none !important;
+  border-radius: 0 !important;
+
+  /* 1. Base sólida completa + los agujeros a restar */
+  -webkit-mask-image: 
+    linear-gradient(#000, #000),
+    radial-gradient(circle at 0 50%, #000 6px, transparent 6.5px),
+    radial-gradient(circle at 100% 50%, #000 6px, transparent 6.5px),
+    radial-gradient(circle at calc(100% - 130px) 0%, #000 14px, transparent 14.5px),
+    radial-gradient(circle at calc(100% - 130px) 100%, #000 14px, transparent 14.5px);
+  -webkit-mask-size: 100% 100%, 20px 24px, 20px 24px, 100% 100%, 100% 100%;
+  -webkit-mask-position: center, left center, right center, center, center;
+  -webkit-mask-repeat: no-repeat, repeat-y, repeat-y, no-repeat, no-repeat;
+  -webkit-mask-composite: xor;
+
+  mask-image: 
+    linear-gradient(#000, #000),
+    radial-gradient(circle at 0 50%, #000 6px, transparent 6.5px),
+    radial-gradient(circle at 100% 50%, #000 6px, transparent 6.5px),
+    radial-gradient(circle at calc(100% - 130px) 0%, #000 14px, transparent 14.5px),
+    radial-gradient(circle at calc(100% - 130px) 100%, #000 14px, transparent 14.5px);
+  mask-size: 100% 100%, 20px 24px, 20px 24px, 100% 100%, 100% 100%;
+  mask-position: center, left center, right center, center, center;
+  mask-repeat: no-repeat, repeat-y, repeat-y, no-repeat, no-repeat;
+  mask-composite: exclude;
+
+}
+
+/* Brillo holográfico */
+.cards .card.card-row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Imagen izquierda */
+.cards .card-img-start {
+  height: 50vh;
+  object-fit: cover;
+  padding: 1.5rem 0 1.5rem 2rem;
+  z-index: 2;
+}
+
+/* Contenido central */
+.cards .card-body {
+  width: calc(72% - 130px);
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+  margin: 3rem;
+  border: solid 3px var(--morado);
+  border-radius: 1rem;
+}
+
+.cards .card-title {
+  font-family: var(--fuente-titulo, sans-serif);
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--negro, #141417);
+  border: solid 2px var(--negro, #141417);
+  padding: 0.6rem 1rem;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 1rem;
+  line-height: 2;
+}
+
+.cards .card-text {
+  font-family: var(--fuente-textos, sans-serif);
+  color: var(--negro, #141417);
+  text-align: justify;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Talón derecho */
+.ticket-footer {
+  width: 130px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 12px;
+  border-left: 2px dashed rgba(20, 20, 23, 0.6);
+  z-index: 2;
+}
+
+/* Código de barras */
+.barcode {
+  height: 75%;
+  min-height: 180px;
+  width: 46px;
+  background: repeating-linear-gradient(
+    180deg,
+    #141417 0px,
+    #141417 3px,
+    transparent 3px,
+    transparent 5px,
+    #141417 5px,
+    #141417 6px,
+    transparent 6px,
+    transparent 9px,
+    #141417 9px,
+    #141417 13px,
+    transparent 13px,
+    transparent 15px,
+    #141417 15px,
+    #141417 16px,
+    transparent 16px,
+    transparent 20px
+  );
+}

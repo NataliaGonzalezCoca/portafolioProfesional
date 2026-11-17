@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Natalia Coca</title>
+  <meta name="description" content="Portafolio de Natalia Coca, desarrolladora Full Stack.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Updock&display=swap" rel="stylesheet">
+</head>
+<body class="bg-faded-grid">
+
+<!-- Íconos reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></symbol>
+  <symbol id="i-sigma" viewBox="0 0 24 24"><path d="M18 7V4H6l6 8-6 8h12v-3"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+</svg>
+
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#inicio" aria-label="Inicio">NC<span>♡</span></a>
+    <nav aria-label="Principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="presentacion" id="inicio">
+  <h2>
+    NATALIA COCA
+    <span aria-hidden="true">NATALIA COCA</span>
+    <span aria-hidden="true">NATALIA COCA</span>
+    <span class="subtitulo">Desarrolladora Full Stack</span>
+  </h2>
+  <img src="assets/manos.png" alt="">
+  <div class="card card-row">
+    <img src="assets/perfil.jpg" class="card-img-start" alt="Retrato de Natalia Coca">
+    <div class="card-body">
+      <h4 class="card-title">¡Hola, mundo!</h4>
+      <p class="card-text">Soy Nat, apasionada del código, creatividad sin límite y curiosidad innata. Me encanta desarrollar interfaces atractivas y construir sistemas eficientes. Aporto estructura, innovación y compromiso a mis equipos de trabajo. ¡Dame un reto y lo resolveré! </p>
+    </div>
+  </div>
+</section>
+
+<section class="proyectos" id="proyectos">
+  <div class="keyboard-wrapper">
+    <!-- Cable izquierdo hasta el extremo -->
+    <svg class="cable cable-left" viewBox="0 0 200 50" preserveAspectRatio="none" fill="none" aria-hidden="true">
+      <path d="M200 18 C 120 18, 80 36, 0 36" stroke="#e48cb2" stroke-width="5" vector-effect="non-scaling-stroke"/>
+    </svg>
+
+    <!-- Carcasa 3D del teclado -->
+    <div class="keyboard-case" role="heading" aria-level="2" aria-label="Proyectos">
+      <div class="key accent" data-char="♡"></div>
+      <div class="key" data-char="P"></div>
+      <div class="key" data-char="R"></div>
+      <div class="key" data-char="O"></div>
+      <div class="key" data-char="Y"></div>
+      <div class="key" data-char="E"></div>
+      <div class="key" data-char="C"></div>
+      <div class="key" data-char="T"></div>
+      <div class="key" data-char="O"></div>
+      <div class="key" data-char="S"></div>
+      <div class="key accent" data-char="♡"></div>
+    </div>
+
+    <!-- Cable derecho hasta el extremo -->
+    <svg class="cable cable-right" viewBox="0 0 200 50" preserveAspectRatio="none" fill="none" aria-hidden="true">
+      <path d="M0 34 C 80 34, 120 16, 200 16" stroke="#e48cb2" stroke-width="5" vector-effect="non-scaling-stroke"/>
+    </svg>
+  </div>
+</section>
+
+<!--
+  Cada ticket lleva:
+    data-repos  → lista JSON de botones "Repositorio" del modal
+    data-video  → ruta o enlace del video de la demo (assets/videos/lo-que-sea.mp4, YouTube o Vimeo).
+                  Si está vacío, el modal de video muestra un placeholder.
+    .detail     → el párrafo largo que se muestra dentro del modal
+-->
+<section class="cards">
+  <p class="hint">Haz clic en un ticket para ver el proyecto</p>
+
+  <!-- Ticket 1 -->
+  <article class="ticket" tabindex="0" role="button" aria-haspopup="dialog" data-num="01"
+           data-video="assets/The Pixel Vault"
+           data-repos='[{"label":"Repositorio Front","url":"https://github.com/DianaSGarciaR/The-Pixel-Vault"},{"label":"Repositorio Back","url":"https://github.com/DiegoG1608/API-The-Pixel-Vault"}]'>
+    <div class="card card-row">
+      <img src="assets/pixel.jpg" class="card-img-start" alt="Captura de The Pixel Vault">
+      <div class="card-body">
+        <h4 class="card-title">THE PIXEL VAULT</h4>
+        <p class="card-text">E-commerce de videojuegos y merchandising con estética retro-futurista diseñado para que sientas que compras dentro de un videojuego. Desarrollado de extremo a extremo (Full Stack), combina una interfaz dinámica y altamente interactiva en el Frontend con una arquitectura sólida en el Backend para la gestión de productos, usuarios y flujo de compra en tiempo real.</p>
+        <div class="detail" hidden>
+          <p>The Pixel Vault es una tienda en línea de videojuegos digitales y merchandising (juguetes, pósters, ropa y accesorios) con una estética pixel-art y neón pensada para que comprar se sienta como jugar. El recorrido de compra está resuelto de punta a punta: un menú de navegación circular, registro e inicio de sesión, un catálogo de tarjetas con modal de detalle, un carrito con control de cantidades y un modal de pago con datos de envío y facturación, una sección «Mi cuenta» con avatar y métodos de pago, historial de pedidos y un formulario con validación para registrar productos. También incluye una página de contacto conectada a Formspree y modales de soporte con preguntas frecuentes, términos y política de privacidad, todo con diseño responsivo. El frontend está hecho con HTML, CSS, JavaScript y Bootstrap 5, diseñado previamente en Figma, y se conecta a una API en Java con Spring Boot y base de datos MySQL. Fue un proyecto de equipo con ramas por tarea y pull requests, lo que me permitió practicar el flujo de trabajo colaborativo de un desarrollo real.</p>
+        </div>
+        <ul class="tags"><li>Full Stack</li><li>E-commerce</li><li>UI retro-futurista</li></ul>
+        <span class="cta">Ver proyecto <i>→</i></span>
+      </div>
+      <div class="ticket-footer">
+        <span class="ticket-no">Admit one · 01</span>
+        <div class="barcode"></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Ticket 2 -->
+  <article class="ticket" tabindex="0" role="button" aria-haspopup="dialog" data-num="02"
+           data-video="(assets/Fotogramas que permanecen.mp4)"
+           data-repos='[{"label":"Repositorio","url":"https://github.com/NataliaGonzalezCoca/recomendaciones"}]'>
+    <div class="card card-row">
+      <img src="assets/cine.jpg" class="card-img-start" alt="Captura de Recomendaciones de películas">
+      <div class="card-body">
+        <h4 class="card-title">RECOMENDACIONES DE PELÍCULAS</h4>
+        <p class="card-text">Una experiencia web dinámica desarrollada íntegramente en un solo archivo HTML. Este proyecto nació como un reto de arquitectura frontend para dominar el diseño One-Page, integrando múltiples niveles de carruseles anidados, ventanas modales y tarjetas interactivas. Una prueba real de ingenio, limpieza y orden estructural en la escritura de código.</p>
+        <div class="detail" hidden>
+          <p>«Fotogramas que permanecen» es un mini sitio de recomendaciones de películas pensado para cinéfilos y para quienes disfrutan de tramas interesantes y estilos cinematográficos distintos. La navegación parte de los géneros: al elegir uno aparecen las películas recomendadas dentro de tarjetas y carruseles, y al seleccionar una se abre un panel de detalle con director, elenco principal, vibes, clasificación y advertencias de contenido, sinopsis, puntuación en Rotten Tomatoes, el porqué de la recomendación, dónde verla, detalles técnicos y películas relacionadas. Está construido con HTML, CSS, Bootstrap y JavaScript, y fue un laboratorio para resolver problemas reales de frontend: un panel que congelaba la página, un menú hamburguesa que quedaba detrás del contenido y pósters que debían verse completos. Documenté el proceso, incluidos los prompts con los que me apoyé en IA para definir la idea y optimizar el CSS, y dejé comentarios en la hoja de estilos a modo de glosario para entender cada decisión.</p>
+        </div>
+        <ul class="tags"><li>HTML</li><li>One-Page</li><li>Carruseles</li><li>Modales</li></ul>
+        <span class="cta">Ver proyecto <i>→</i></span>
+      </div>
+      <div class="ticket-footer">
+        <span class="ticket-no">Admit one · 02</span>
+        <div class="barcode"></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Ticket 3 -->
+  <article class="ticket" tabindex="0" role="button" aria-haspopup="dialog" data-num="03"
+           data-video="(assets/Gryffindor Resistance.mp4)"
+           data-repos='[{"label":"Repositorio","url":"https://github.com/DanielCastroPerez/Gryffindor-Resistance"}]'>
+    <div class="card card-row">
+      <img src="assets/gryffindor.jpg" class="card-img-start" alt="Captura de Gryffindor Resistance">
+      <div class="card-body">
+        <h4 class="card-title">GRYFFINDOR RESISTANCE</h4>
+        <p class="card-text">Landing page temática de la casa Gryffindor (Harry Potter) diseñada como una red social para estudiantes de magia durante un hackatón de un día. Desarrollé de forma individual todo el Frontend de la página de perfil integrada —una réplica estilo Facebook con banner, información, publicaciones y galería de fotos—, demostrando agilidad y dominio de maquetación UI en tiempo récord.</p>
+        <div class="detail" hidden>
+          <p>Gryffindor Resistance es un sitio temático de la casa Gryffindor, con paleta roja y dorada, construido en equipo durante un hackatón de un día. Presenta la historia de Godric Gryffindor, un carrusel con los personajes principales de la casa, un formulario de reclutamiento de voluntarios con validación —cuyos registros se guardan en el navegador y se muestran como tarjetas—, un catálogo visual de productos como bufandas, capas, uniformes y varitas, y una página de perfil que funciona como red social para estudiantes de magia. Mi aportación fue esa página de perfil: la desarrollé completa y de forma individual como una réplica al estilo Facebook, con banner, información personal, publicaciones y galería de fotos, cuidando el diseño responsivo con Bootstrap 5. Es una aplicación 100 % del lado del cliente, hecha con HTML, CSS y JavaScript, y un buen ejemplo de cómo coordinar interfaz, tiempos y decisiones de diseño con un equipo grande bajo una fecha límite de horas.</p>
+        </div>
+        <ul class="tags"><li>Frontend</li><li>Hackatón</li><li>Maquetación UI</li></ul>
+        <span class="cta">Ver proyecto <i>→</i></span>
+      </div>
+      <div class="ticket-footer">
+        <span class="ticket-no">Admit one · 03</span>
+        <div class="barcode"></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Ticket 4 -->
+  <article class="ticket" tabindex="0" role="button" aria-haspopup="dialog" data-num="04"
+           data-video="..."
+           data-repos='[{"label":"Repositorio","url":"https://github.com/NataliaGonzalezCoca/portafolio"}]'>
+    <div class="card card-row">
+      <img src="assets/pistas.jpg" class="card-img-start" alt="Captura de Encuentra las pistas">
+      <div class="card-body">
+        <h4 class="card-title">ENCUENTRA LAS PISTAS</h4>
+        <p class="card-text">Primera versión de mi portafolio personal, diseñada como una experiencia gamificada de búsqueda de pistas. Cada proyecto funciona como una habitación temática en la que el usuario debe descubrir 3 elementos ocultos para desbloquear la información técnica y visual, combinando narrativa creativa, JavaScript y diseño responsivo.</p>
+        <div class="detail" hidden>
+          <p>Esta fue la primera versión de mi portafolio y nació de una pregunta sencilla: ¿y si ver proyectos se sintiera como jugar? En lugar de una lista de enlaces, cada proyecto es una habitación temática que se explora: para abrir su información técnica y visual hay que encontrar tres elementos escondidos en la escena. Esa mecánica convierte la visita en una pequeña aventura, invita a mirar con atención y deja que cada proyecto cuente su historia antes de mostrar los detalles. Detrás hay narrativa creativa, ilustración y diseño pensados para cada habitación, JavaScript para controlar las pistas y el desbloqueo, y un diseño responsivo para que la experiencia funcione igual en computadora y en móvil. Es un proyecto personal hecho con HTML, CSS y JavaScript, y la base creativa de la que partió este portafolio.</p>
+        </div>
+        <ul class="tags"><li>JavaScript</li><li>Gamificación</li><li>Responsive</li></ul>
+        <span class="cta">Ver proyecto <i>→</i></span>
+      </div>
+      <div class="ticket-footer">
+        <span class="ticket-no">Admit one · 04</span>
+        <div class="barcode"></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ========== Habilidades complementarias ========== -->
+<section class="section" id="habilidades">
+  <div class="section-head rv">
+    <p class="eyebrow">Más allá del código</p>
+    <h2>HABILIDADES <em>EXTRA</em></h2>
+    <p>Lo que no aparece en un repositorio, pero se nota en cómo trabajo: experiencia con personas, creatividad y una base analítica que complementan mi perfil como desarrolladora.</p>
+  </div>
+
+  <div class="skills rv">
+    <article class="skill">
+      <span class="ico-wrap"><svg class="ico ico-s" aria-hidden="true"><use href="#i-users"/></svg></span>
+      <h3>Atención a clientes, administración, logística y ventas</h3>
+      <p>Una década tratando directamente con personas: resolver, organizar, coordinar y vender. Se traduce en empatía con el usuario final, orden en los procesos y comunicación clara con cualquier equipo.</p>
+      <span class="chip">10 años de experiencia</span>
+    </article>
+
+    <article class="skill">
+      <span class="ico-wrap"><svg class="ico ico-s" aria-hidden="true"><use href="#i-chat"/></svg></span>
+      <h3>Inglés conversacional</h3>
+      <p>Me comunico en inglés con soltura en conversaciones del día a día y de trabajo, y puedo seguir reuniones y documentación en el idioma.</p>
+      <span class="chip">Nivel B2</span>
+    </article>
+
+    <article class="skill">
+      <span class="ico-wrap"><svg class="ico ico-s" aria-hidden="true"><use href="#i-pencil"/></svg></span>
+      <h3>Arte y diseño</h3>
+      <p>Dibujo y diseño con un fuerte sentido de la estética visual. Por eso mis interfaces cuidan color, composición y detalle desde el primer boceto.</p>
+      <span class="chip">Dibujo · Diseño</span>
+    </article>
+
+    <article class="skill">
+      <span class="ico-wrap"><svg class="ico ico-s" aria-hidden="true"><use href="#i-music"/></svg></span>
+      <h3>Música</h3>
+      <p>Canto y compongo mis propias canciones. Es mi laboratorio creativo para pensar en ritmo, estructura y emoción.</p>
+      <span class="chip">Canto · Composición</span>
+    </article>
+
+    <article class="skill">
+      <span class="ico-wrap"><svg class="ico ico-s" aria-hidden="true"><use href="#i-video"/></svg></span>
+      <h3>Contenido y edición de video</h3>
+      <p>Creo contenido y edito video con ojo para el ritmo y la narrativa visual, desde la idea hasta el acabado final.</p>
+      <span class="chip">Creación · Edición</span>
+    </article>
+
+    <article class="skill">
+      <span class="ico-wrap"><svg class="ico ico-s" aria-hidden="true"><use href="#i-sigma"/></svg></span>
+      <h3>Matemáticas y lógica</h3>
+      <p>Estudié dos años de Economía y desarrollé una base sólida en matemáticas complejas, que hoy me ayuda con las bases de datos y a entender la lógica del backend.</p>
+      <span class="chip">2 años de Economía</span>
+    </article>
+
+    <article class="skill">
+      <span class="ico-wrap"><svg class="ico ico-s" aria-hidden="true"><use href="#i-heart"/></svg></span>
+      <h3>Inteligencia emocional</h3>
+      <p>Escucho, leo el ambiente y sé acompañar a un equipo en momentos de presión. Me ayuda a comunicar con claridad y a resolver desacuerdos con respeto.</p>
+      <span class="chip">Trabajo en equipo</span>
+    </article>
+
+    <article class="skill">
+      <span class="ico-wrap"><svg class="ico ico-s" aria-hidden="true"><use href="#i-globe"/></svg></span>
+      <h3>Consciencia social</h3>
+      <p>Estoy informada sobre los movimientos sociales y tengo consciencia de ellos. Por eso trabajo y construyo espacios seguros, respetuosos y libres de discriminación.</p>
+      <span class="chip">Confianza y respeto</span>
+    </article>
+  </div>
+</section>
+
+<!-- ========== Stack tecnológico ========== -->
+<section class="section" id="stack">
+  <div class="section-head rv">
+    <p class="eyebrow">Mi caja de herramientas</p>
+    <h2>STACK <em>TECNOLÓGICO</em></h2>
+    <p>Con lo que construyo, diseño y colaboro. Pasa el cursor y presiona las teclas.</p>
+  </div>
+
+  <div class="stack rv">
+    <div class="stack-group">
+      <h3>Frontend</h3>
+      <div class="keys">
+        <span class="keycap">HTML</span>
+        <span class="keycap accent">CSS</span>
+        <span class="keycap">JavaScript</span>
+        <span class="keycap">Bootstrap</span>
+      </div>
+    </div>
+
+    <div class="stack-group">
+      <h3>Backend y datos</h3>
+      <div class="keys">
+        <span class="keycap">Java</span>
+        <span class="keycap accent">Spring Boot</span>
+        <span class="keycap">Python</span>
+        <span class="keycap">MySQL</span>
+      </div>
+    </div>
+
+    <div class="stack-group">
+      <h3>Herramientas de desarrollo</h3>
+      <div class="keys">
+        <span class="keycap">VS Code</span>
+        <span class="keycap accent">IntelliJ</span>
+        <span class="keycap">Bruno</span>
+        <span class="keycap">Linux Ubuntu</span>
+      </div>
+    </div>
+
+    <div class="stack-group">
+      <h3>Diseño, gestión y colaboración</h3>
+      <div class="keys">
+        <span class="keycap">Figma</span>
+        <span class="keycap accent">Canva</span>
+        <span class="keycap">Jira</span>
+        <span class="keycap">SCRUM</span>
+        <span class="keycap">Google Workspace</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Contacto ========== -->
+<section class="info contacto" id="contacto">
+  <img src="assets/laptop.png" alt="">
+
+  <div class="contact-panel rv">
+    <p class="contact-title">¿Construimos algo juntos?</p>
+    <p class="contact-sub">Escríbeme o encuéntrame aquí</p>
+
+    <div class="contact-links">
+      <a class="contact-card" href="https://github.com/NataliaGonzalezCoca" target="_blank" rel="noopener">
+        <span class="ico-box"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg></span>
+        <span class="txt"><small>GitHub</small><strong>NataliaGonzalezCoca</strong></span>
+        <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/nataliagonzalezcoca/" target="_blank" rel="noopener">
+        <span class="ico-box"><svg class="ico" aria-hidden="true"><use href="#i-linkedin"/></svg></span>
+        <span class="txt"><small>LinkedIn</small><strong>in/nataliagonzalezcoca</strong></span>
+        <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="contact-card" href="mailto:natalia.gonzalez.coca@gmail.com">
+        <span class="ico-box"><svg class="ico ico-s" aria-hidden="true"><use href="#i-mail"/></svg></span>
+        <span class="txt"><small>Correo</small><strong>natalia.gonzalez.coca@gmail.com</strong></span>
+        <span class="arrow" aria-hidden="true">↗</span>
+      </a>
+</section>
+</main>
+
+    </div>
+    <small class="copyright">© 2026 Natalia Coca · Neurodivergente · Hecho con ♡ </small>
+  </div>
+
+<!-- Modal de proyecto -->
+<dialog class="modal" id="modal" aria-labelledby="modal-title">
+  <button class="modal-close" type="button" data-close aria-label="Cerrar">✕</button>
+  <div class="modal-grid">
+    <figure class="modal-media">
+      <img id="modal-img" src="" alt="">
+    </figure>
+    <div class="modal-body">
+      <p class="eyebrow">Proyecto Nº <span id="modal-num"></span></p>
+      <h3 id="modal-title"></h3>
+      <div class="modal-text" id="modal-text"></div>
+      <ul class="tags" id="modal-tags"></ul>
+      <div class="modal-actions">
+        <span class="modal-repos" id="modal-repos"></span>
+        <button class="btn play" id="modal-demo" type="button">
+          <svg class="ico" aria-hidden="true"><use href="#i-play"/></svg>Ver demo
+        </button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- Modal de video (se abre encima del modal de proyecto) -->
+<dialog class="modal video" id="video-modal" aria-labelledby="video-title">
+  <button class="modal-close" type="button" data-close-video aria-label="Cerrar video">✕</button>
+  <div class="video-bar"><i></i><i></i><i></i><span id="video-title">Demo</span></div>
+  <div class="video-frame">
+    <div class="video-placeholder">
+      <span class="big-play"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg></span>
+      <p>Demo próximamente</p>
+      <small>El video de este proyecto aparecerá aquí</small>
+    </div>
+    <div class="video-stage" id="video-stage"></div>
+  </div>
+</dialog>
+
+<script src="app.js" defer></script>
+</body>
+</html>
